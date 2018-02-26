@@ -20,43 +20,28 @@ import javax.persistence.OneToMany;
  *
  * @author Christian
  */
-@Entity(name = "Benutzer")
+@Entity
 public class Benutzer implements Serializable {
 
     @Id
-    @Column(name = "Benutzername")
     private String benutzername;
-    @Column(name = "Passwort Hash")
     private String passwordHash;
-    @Column(name = "Vorname")
     private String vorname;
-    @Column(name = "Nachname")
     private String nachname;
-    @Column(name = "Straße")
     private String strasse;
-    @Column(name = "Hausnummer")
     private int hausnr;
-    @Column(name = "Postleitzahl")
     private int plz;
-    @Column(name = "Ort")
     private String ort;
-    @Column(name = "Land")
     private String land;
-    @Column(name = "E-Mail")
     private String email;
-    @Column(name = "Telefonnummer")
     private String telefonnr;
 
     @OneToMany
     List<Anzeige> anzeigenVeroeffentlicht = new ArrayList<>();
-    
+
     @ManyToMany
     List<Anzeige> anzeigenMerktSich = new ArrayList<>();
-    
-    @OneToMany
-    List<Nachricht> nachrichten = new ArrayList<>();
-    
+
     //Konstruktor
     //Getter + Setter
-    
 }

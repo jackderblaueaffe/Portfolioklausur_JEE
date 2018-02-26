@@ -20,17 +20,14 @@ import javax.persistence.OneToMany;
  *
  * @author Christian
  */
-@Entity(name = "Foto")
+@Entity
 public class Foto implements Serializable {
 
     @Id
     @GeneratedValue
-    @Column(name = "Id")
     private long id;
-    @Column(name = "Bezeichnung")
     private String bezeichnung;
     @Lob
-    @Column(name = "Bilddaten")
     private byte[] bilddaten; // https://javabydeveloper.com/save-image-working-large-objects/
     
     @ManyToOne

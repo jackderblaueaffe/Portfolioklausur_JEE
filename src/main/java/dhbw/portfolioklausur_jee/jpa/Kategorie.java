@@ -19,13 +19,11 @@ import javax.persistence.ManyToMany;
  *
  * @author Christian
  */
-@Entity(name = "Kategorie")
+@Entity
 public class Kategorie implements Serializable {
 
     @Id
-    @Column(name = "Slug")
     private String slug;
-    @Column(name = "Name")
     private String name;
     
     @ManyToMany(mappedBy="kategorien")

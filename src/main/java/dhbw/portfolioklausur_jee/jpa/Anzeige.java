@@ -22,30 +22,20 @@ import javax.persistence.OneToMany;
  *
  * @author Christian
  */
-@Entity(name = "Anzeige")
+@Entity
 public class Anzeige implements Serializable {
 
     @Id
     @GeneratedValue
-    @Column(name = "Id")
     private long id;
-    @Column(name = "Art")
     private AngebotArt angebotArt;
-    @Column(name = "Titel")
     private String titel;
-    @Column(name = "Beschreibung")
     private String beschreibung;
-    @Column(name = "Erstellungsdatum")
     private Date erstellungsdatum;
-    @Column(name = "Online bis")
     private Date onlineBis;
-    @Column(name = "Preisvorstellung")
     private double preisvorstellung;
-    @Column(name = "Art des Preises")
     private PreisArt preisArt;
-    @Column(name = "Postleitzahl")
     private int plz;
-    @Column(name = "Ort")
     private String ort;
 
     @ManyToOne

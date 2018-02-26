@@ -18,25 +18,21 @@ import javax.persistence.OneToMany;
  *
  * @author Christian
  */
-@Entity(name = "Nachricht")
+@Entity
 public class Nachricht implements Serializable {
 
     @Id
     @GeneratedValue
-    @Column(name = "Id")
     private long id;
-    @Column(name="Von Benutzer")
+    @ManyToOne
     private Benutzer vonBenutzer;
-    @Column(name="An Benutzer")
+    @ManyToOne
     private Benutzer anBenutzer;
-    @Column(name="Zu Artikel")
+    @ManyToOne
     private Anzeige zuArtikel;
-    @Column(name="Text")
     private String text;
     
-    @ManyToOne
-    Benutzer benutzer = new Benutzer();
-    
+
     //Konstruktor
     //Getter + Setter
 }
