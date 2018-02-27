@@ -14,11 +14,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import lombok.Data;
 
 /**
  *
  * @author Christian
  */
+@Data
 @Entity
 public class Kategorie implements Serializable {
 
@@ -29,6 +31,4 @@ public class Kategorie implements Serializable {
     @ManyToMany(mappedBy="kategorien")
     List<Anzeige> anzeigen = new ArrayList<>();
     
-    //Konstruktor
-    //Getter + Setter
 }

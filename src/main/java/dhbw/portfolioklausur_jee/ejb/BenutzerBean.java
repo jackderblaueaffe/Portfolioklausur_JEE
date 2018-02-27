@@ -1,3 +1,5 @@
+package dhbw.portfolioklausur_jee.ejb;
+
 
 import dhbw.portfolioklausur_jee.jpa.Benutzer;
 import javax.annotation.PostConstruct;
@@ -16,13 +18,20 @@ import javax.persistence.PersistenceContext;
  * @author larau
  */
 @Stateless
-public class testBean {
+public class BenutzerBean extends EntityBean<Benutzer, String>{
     
     @PersistenceContext
     EntityManager em;
+
+    public BenutzerBean() {
+        super(Benutzer.class);
+    }
+     
     @PostConstruct
     public void blub(){
-        System.out.println("blub");
+       //System.out.println("blub");
         em.find(Benutzer.class, 1L);
-}
+    }
+   
+    
 }

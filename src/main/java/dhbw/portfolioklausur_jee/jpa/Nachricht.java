@@ -11,25 +11,33 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import lombok.Data;
 
 /**
  *
  * @author Christian
  */
+@Data
 @Entity
 public class Nachricht implements Serializable {
 
     @Id
     @GeneratedValue
     private long id;
+    
     @ManyToOne
     private Benutzer vonBenutzer;
+    
     @ManyToOne
     private Benutzer anBenutzer;
+    
     @ManyToOne
     private Anzeige zuArtikel;
+    
+    @Lob
     private String text;
     
 

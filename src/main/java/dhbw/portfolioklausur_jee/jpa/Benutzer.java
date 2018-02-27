@@ -15,11 +15,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
+import lombok.Data;
 
 /**
  *
  * @author Christian
  */
+@Data
 @Entity
 public class Benutzer implements Serializable {
 
@@ -42,6 +44,6 @@ public class Benutzer implements Serializable {
     @ManyToMany
     List<Anzeige> anzeigenMerktSich = new ArrayList<>();
 
-    //Konstruktor
-    //Getter + Setter
+    public Benutzer() {
+    }
 }

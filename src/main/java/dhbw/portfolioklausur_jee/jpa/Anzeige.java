@@ -17,11 +17,14 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import lombok.Data;
 
 /**
  *
  * @author Christian
  */
+
+@Data
 @Entity
 public class Anzeige implements Serializable {
 
