@@ -44,6 +44,9 @@ public class Benutzer implements Serializable {
     @ManyToMany
     List<Anzeige> anzeigenMerktSich = new ArrayList<>();
 
+    @OneToMany
+    List<Nachricht> nachrichten = new ArrayList<>();
+    
     public Benutzer() {
     }
 }
